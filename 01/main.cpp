@@ -6,7 +6,8 @@
 #include <vector>
 
 using namespace std;
-int main() {
+
+int part1() {
     /*
      * Specify input file parameters.
      * The file is expected to contain a two-column list of uint32s.
@@ -63,7 +64,7 @@ int main() {
 
     int sum_of_distances{0};
     for (size_t i = 0; i < col0.size(); i++) {
-        const int distance = abs(col0[i] - col1[i]);
+        const int distance {abs(col0[i] - col1[i])};
         sum_of_distances += distance;
     }
 
@@ -72,4 +73,12 @@ int main() {
      */
     cout << "Total distance: " << sum_of_distances << endl;
     return EXIT_SUCCESS;
+}
+
+int part2() {
+    return EXIT_FAILURE;
+}
+
+int main() {
+    part1();
 }
